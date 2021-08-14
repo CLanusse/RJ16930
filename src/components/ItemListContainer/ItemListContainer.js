@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 export const ItemListContainer = ( {greeting} ) => {
 
 
+    const [mensaje, setMensaje] = useState(greeting)
+
+
+    const clickear = () => { 
+        setMensaje("Buen día a todos")
+    }
+
     return (
-        <div>
-            <h2>{greeting}</h2>
+        <div className="container my-5">
+            <h2 onClick={clickear} >{mensaje}</h2>
             <hr/>
         </div>
     )
