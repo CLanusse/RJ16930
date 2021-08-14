@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 
@@ -9,6 +9,7 @@ export const Clock = () => {
     const handleTimer = () => {
         setTime( new Date() )
     }
+
 
     return (
         <div onClick={handleTimer}>

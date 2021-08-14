@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const ClickTracker = () => {
 
@@ -12,12 +12,15 @@ export const ClickTracker = () => {
 
     // }
 
+
     const [contador, setContador] = useState(
         {
             clicks: 0,
             fecha: null
         }
     )
+
+
 
     const handleClick = () => {
         setContador({
@@ -26,6 +29,18 @@ export const ClickTracker = () => {
         })
     }
 
+
+    useEffect( ()=> {
+        console.log("Componente montado")
+
+        return () => {
+            console.log("Componente desmontado")
+        }
+    }, [])
+    
+    useEffect( ()=>{
+        console.log("Actualizado contador")
+    }, [contador])
 
     return (
         <div className="container" onClick={handleClick} >
