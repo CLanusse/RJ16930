@@ -14,20 +14,12 @@ function App() {
   return (
     <>
       <NavBar/>
-      <ItemListContainer greeting="Hola Coders"/>
-
-
-
-
-
-
+      <ItemListContainer/>
 
       
-{/* 
+    {/* 
       <button onClick={()=> {setMontar(!montar)} }> Montar/Desmontar </button>
-      { montar && <ClickTracker/> } */}
-
-      
+      { montar && <ClickTracker/> } */}    
     </>
    
   );
