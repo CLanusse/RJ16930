@@ -9,6 +9,21 @@ export const ItemListContainer = () => {
 
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
+
+
+    // useEffect(()=>{
+
+    //     const mover = (event) => {
+    //         console.log(event)
+    //         console.log('Mouse moved')
+    //     }
+    //     window.addEventListener('mousemove', mover)
+
+    //     return ()=>{
+    //         window.removeEventListener('mousemove', mover)
+    //     }
+    // }, [])
+
     
     useEffect( ()=> {
         setLoading(true)

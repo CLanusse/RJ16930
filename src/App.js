@@ -4,17 +4,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { InputEv } from "./ejemplos/InputEv/InputEv";
 
 
 
 function App() {
 
+
+
     return (
         <>
           <BrowserRouter>
-
             <NavBar/>
 
+            <InputEv/>
+            
             <Switch>
                 <Route exact path="/">
                     <ItemListContainer/>
@@ -44,6 +48,8 @@ function App() {
             </Switch>
             
           </BrowserRouter>
+    
+
         </>
       
     );
