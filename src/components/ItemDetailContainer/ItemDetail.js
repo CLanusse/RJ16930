@@ -20,7 +20,6 @@ export const ItemDetail = ({category, id, nombre, desc, img, precio, stock}) => 
             <h2>{nombre}</h2>
             <p>Precio: {precio}</p>
 
-
             <img src={img} alt={nombre}/>
             <p>{desc}</p>
 

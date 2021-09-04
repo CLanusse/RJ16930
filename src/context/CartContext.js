@@ -30,7 +30,7 @@ export const CartProvider = ({children}) => {
     }
 
     const isInCart = (id) => {
-        return carrito.some(el => el.id == id)
+        return carrito.some(el => el.id === id)
     }
 
     return (
