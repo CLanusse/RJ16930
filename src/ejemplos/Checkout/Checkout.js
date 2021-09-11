@@ -9,7 +9,6 @@ export const Checkout = () => {
 
     const {carrito} = useContext(CartContext)
 
-    console.log(carrito)
     const db = getFirestore()
     const orders = db.collection('orders')
 
