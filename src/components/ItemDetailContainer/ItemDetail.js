@@ -16,20 +16,27 @@ export const ItemDetail = ({category, id, nombre, desc, img, precio, stock}) => 
     }
 
     return (
-        <div>
-            <h2>{nombre}</h2>
-            <p>Precio: {precio}</p>
+        <div className="container my-5">
+            <div className="row">
+                <div className="col-6">
+                    <img src={img} alt={nombre}/>
+                </div>
+                <div className="col-6">
+                    <h2>{nombre}</h2>
+                    <p>Precio: {precio}</p>
 
-            <img src={img} alt={nombre}/>
-            <p>{desc}</p>
+                    <p>{desc}</p>
 
-            <Counter 
-                max={stock} 
-                cantidad={cantidad} 
-                setCantidad={setCantidad} 
-                agregar={handleAdd} 
-                agregado={isInCart(id)}
-            />
+                    <Counter 
+                        max={stock} 
+                        cantidad={cantidad} 
+                        setCantidad={setCantidad} 
+                        agregar={handleAdd} 
+                        agregado={isInCart(id)}
+                    />
+                </div>
+
+            </div>
             <Link to={`/category/${category}`} className="btn btn-primary">Volver</Link>
         </div>
     )

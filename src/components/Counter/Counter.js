@@ -24,10 +24,12 @@ export const Counter = ({max, cantidad, setCantidad, agregar, agregado}) => {
                         ? <Link to="/cart" className="btn btn-success">Terminar mi compra</Link>
                         :
                         <div>
-                            <button className="btn btn-primary mx-1" onClick={handleRestar}>-</button>
-                            <p>{cantidad}</p>
-                            <button className="btn btn-primary mx-1" onClick={handleSumar}>+</button>
-                            <button className="btn btn-outline-primary" onClick={agregar}>Agregar al carrito</button>
+                            <div className="d-flex">
+                                <button className="btn btn-primary mx-1" onClick={handleRestar}>-</button>
+                                <p className="mx-3">{cantidad}</p>
+                                <button className="btn btn-primary mx-1" onClick={handleSumar}>+</button>
+                            </div>
+                            <button className="btn btn-outline-primary my-2" onClick={agregar}>Agregar al carrito</button>
                         </div>
                 }
 
